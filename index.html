@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Razorfish | Test</title>    
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="author" content="Shaw Du">
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+<style>
+path {
+    stroke: white;
+    stroke-width: 3;
+    fill: none;
+}
+</style>
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+</head>
+<body ng-app="mainApp">
+    <div class="container">
+        <div class="title center uppercase">
+            <h1>Metro Vibes | Free Sample</h1>
+            <h4>Get the full 100+ Elements on www.PixelKit.com</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-7">
+<!--                menu-->
+                <div class="well uppercase btn-group btn-group-justified" id="menu">                    
+                    <a class="btn"><span class="glyphicon glyphicon-map-marker"></span><span class="menu-txt">check in</span><span class="sup">3</span></a>    
+                    <a class="btn"><span class="glyphicon glyphicon-heart" ></span><span class="menu-txt">events</span></a>              
+                    <a class="btn active"><span class="glyphicon glyphicon-user"></span><span class="menu-txt">account</span></a>
+                    <a class="btn"><span class="glyphicon glyphicon-cog"></span><span class="menu-txt">settings</span></a>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+<!--                        Graphic-->
+                        <div id="graphic" ng-controller="GraphicController">
+                            <div id="graphic-1">
+                                <h3><span class="arrow-up"></span><span>634. 39</span></h3>
+                                <div>+2.18 (3.71%)</div>
+                            </div>
+                            <div id="graphic-2" class="graphic-shadow">
+                            </div>
+                            <div id="graphic-3" class="chart">23,23,38,45,25,25,26,23,22,25,25,29,27,24,24,25,26,23,24,29,32,25,30,29,31,30,30,22,28,32,33,28,25,18</div>
+                            <div id="graphic-content">
+                                <div class="graphic-date">Today 2:25<span>PM</span></div>
+                                <div class="graphic-location">Salt Lake City, Utah</div>
+                                <div class="row graphic-data">
+                                    <div class="col-sm-6 gtab center">
+                                        <div class="gtab-fig">13.5 M</div>
+                                        <div class="gtab-sub">Shares Traded</div>
+                                    </div>
+                                    <div class="col-sm-6 gtab center">
+                                        <div class="gtab-fig">28.44 B</div>
+                                        <div class="gtab-sub">Market Cap</div>
+                                    </div>
+                                    <div class="col-sm-7 gtab-aapl">
+                                        <div class="aapl-title">AAPL</div>
+                                        <div id="appl"></div>
+                                    </div>
+                                    <div class="col-sm-5 gtab-aapl">
+                                        <div>
+                                            <div class="aapl-title">Yearly Change</div>
+                                            <div class="gtab-num center">+127.01</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+<!--                        Profile-->
+                        <div id="profile" ng-controller="ProfileController">
+                            <div class="profile-avatar">
+                                <div class="row">
+                                <div class="col-sm-5"><img src="images/avatar.png" alt="avatar"></div>
+                                <div class="col-sm-7">
+                                    <div class="avatar-stat">
+                                    <h3 class="uppercase">Courtney Timmons</h3>
+                                    <div>15,323 followers</div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <ul>
+                                <li class="profile-bg">Edit user<span class="glyphicon glyphicon-user"></span></li>
+                                <li class="profile-bg">Web statistics<span class="glyphicon glyphicon-stats"></span></li>
+                                <li class="profile-bg">Upload settings<span class="glyphicon glyphicon-wrench"></span></li>
+                                <li class="profile-bg">Events<span class="glyphicon glyphicon-map-marker"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+<!--                        Statistic-->
+                        <div id="statistic" ng-controller="StatController">
+                            <ul class="nav nav-tabs nav-justified">
+                              <li class="active"><a data-toggle="tab" href="#stat1">Diagram Stats</a></li>
+                              <li><a data-toggle="tab" href="#stat2">Month Report</a></li>                              
+                            </ul>
+
+                            <div class="tab-content">
+                                <div id="stat1" class="tab-pane fade in active">
+                                    <div class="stat-pie">
+                                        <h4 class="uppercase center">data transfer</h4>
+                                        <canvas id="stat-pie" height="260" width="260"></canvas>
+                                        <div class="donut-inner">                                            
+                                            <div class="center">2, 435 files</div>
+                                            <h5 class="center">47 Gb</h5>
+                                        </div>
+                                    </div>
+                                    <div class="btn-group btn-group-justified">                    
+                                        <div class="btn stat-col-1">
+                                            <div>audio</div>
+                                            <h5>55%</h5>                                            
+                                        </div>    
+                                        <div class="btn stat-col-2">
+                                            <div>video</div>
+                                            <h5>23%</h5>                                            
+                                        </div>              
+                                        <div class="btn stat-col-3">
+                                            <div>photo</div>
+                                            <h5>17%</h5>                                           
+                                        </div>                                        
+                                    </div>
+                                    <div class="btn-group btn-group-justified">                    
+                                        <div class="btn stat-btn">                                           
+                                            <div><span class="fa fa-cloud-upload"></span></div>
+                                            <div class="uppercase">upload file</div>
+                                        </div>    
+                                        <div class="btn stat-btn">                                            
+                                            <div><span class="fa fa-share-alt"></span></div>
+                                            <div class="uppercase">share link</div>
+                                        </div>              
+                                        <div class="btn stat-btn">                                            
+                                            <div><span class="fa fa-history"></span></div>
+                                            <div class="uppercase">back up</div>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                                <div id="stat2" class="tab-pane fade">
+                                    <h3 class="center">Stat 2</h3>
+                                    <p class="center">Some content in stat 2.</p>
+                                </div>                              
+                            </div>
+                        </div>
+<!--                        Navigation-->
+                        <div class="well"></div>
+<!--                        Ribbons-->
+                        <div class="well"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+<!--                Blog-->
+                <div class="well"></div>
+<!--                Contact Form-->
+                <div class="well"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-ui-router.min.js"></script>
+    <script src="js/jquery.sparkline.min.js"></script>
+    <script src="http://mbostock.github.com/d3/d3.v2.js"></script>
+    <script src="js/chart.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/graphic-controller.js"></script>
+    <script src="js/profile-controller.js"></script>
+    <script src="js/stat-controller.js"></script>    
+</body>
+</html>
